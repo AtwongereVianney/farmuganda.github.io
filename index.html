@@ -1,0 +1,599 @@
+<html> 
+<head>
+	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title></title>
+
+	<style>
+		body{
+			/*background-image: url("images/farm2.JPEG");*/
+			background-size: cover;
+			margin: 0;
+			padding: 10px 20px;
+			font-family: Copperplate Gothic Light;
+			text-align: center;
+		
+		@media only screen and (max-width:600px) {
+			.header {
+				padding: 10px 50px;
+				font-size: 14px;
+		}
+			.main-content{
+				padding: 10px 50px ;
+				font-size: 14px;
+		}
+		}
+		@media only screen and (min-width:601px) and (max-width:1024px){
+			.header{
+				padding: 20px 60px;
+				font-size: 16px;
+			}
+			.main-content{
+				padding: 0px;
+				font-size: 16px;
+			}
+			
+		}
+		@media only screen and (min-width:1025px){
+			.header{
+				padding: 30px 70px;
+				font-size: 18px;
+		}
+		.main-content{
+				padding: 30px 70px;
+				font-size: 18px;
+			}
+		}
+	}	
+		
+		header{
+			background-color: forestgreen;
+			padding: 10px 180px;
+			text-align: center;
+			padding-left: 5;
+			justify-content: space-between;
+			display: flex;
+			align-items: center;
+		}
+		header img {
+			width: 15vh;
+			height: 15vh;
+			left: 0;
+			margin: 0;
+			
+		}
+		
+		nav{
+			padding: 20px 20px;
+			background-color: white;
+			padding: 10px 10px;
+			
+		}
+		nav ul{
+			list-style-type: none;
+			padding: 0;
+			margin: 0;
+			text-align: center;
+			display: block;
+		}
+		nav ul li{
+			margin-right: 6vh;
+			list-style: none;
+			position: relative;
+			display:inline-block;
+			margin-right: 10vh;
+		}
+		nav ul li a{
+			background-color: lightgreen;
+			background-size: cover;
+			display: inline-block;
+			transition: all 0.3s ease;
+			font-family: sans-serif;
+			color: black;
+			font-size: 22px;
+			/*background-color: green;*/
+			padding: 20px 14px;
+			text-decoration: none;
+		}
+		nav ul li a:hover{
+			background-color: brown;
+			color: lightgreen;
+		}
+		.dropdown{
+			position: relative;
+		}
+		.dropdown-content{
+			display: none;
+			position: absolute;
+			background-color: lightgreen;
+			min-width: 16vh;
+		}
+		.dropdown-content a{
+			color: black;
+			padding: 12px,16px;
+			text-decoration: none;
+			display: block;
+		}
+		.dropdown:hover .dropdown-content{
+			display: block;
+			background-color: black;
+			color: red;
+
+		}
+		/* Slider Styles */
+		.slider{
+	width: 100%;
+	height: 600px;
+	margin-top: 116px;
+}
+.slider .slider-container{
+	position: relative;
+	width: 500%;
+	left: 0;
+	margin: 0;
+	animation: 20s slider infinite;
+}
+
+
+.slider .slider-container .fi,
+.slider .slider-container .mySlides fade{
+ width: 20%;
+ float: left;
+}
+#header #btnhamburger span {
+    display: block;
+    background-color: white;
+    height: 3px;
+    width: 25px;
+    transition: all 300ms;
+    margin-right: 20px;
+    cursor: pointer;
+  }
+  
+  #header #btnhamburger span:not(:last-child) {
+    margin-bottom: 5px;
+  }
+  #header #btnhamburger.active span:first-child {
+    transform: rotate(45deg) translate(5px, 6px);
+  }
+  #header #btnhamburger.active span:nth-child(2) {
+    opacity: 0;
+  }
+  #header #btnhamburger.active span:last-child {
+    transform: rotate(-45deg) translate(5px, -6px);
+  }
+  #header #overlay.active {
+    animation: fade-in 300ms ease-in-out forwards;
+  }
+  #header #mobile.active {
+    display: block;
+  }
+  #header #mobile {
+    background: gray;
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    transform: translate(-50%);
+    width: calc(100% - 3rem);
+    padding: 26px;
+    border-radius: 5px;
+    z-index: 200;
+    display: none;
+  }
+  #header #mobile a {
+    display: block;
+    color: rgb(253, 168, 91);
+    padding: 10px;
+    text-align: start;
+    font-size: 20px;
+    transition: all 155ms ease-in-out;
+    text-decoration: none;
+  }
+  #header #mobile a:hover {
+    background: rgb(77, 68, 58);
+    border-radius: 5px;
+    transform: translateX(10px);
+  }
+  
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  @keyframes fade-out {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+  
+  .container--pall {
+    padding-top: 70px;
+    padding-bottom: 70px;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+  @media (min-width: 1024px) {
+    .container--pall {
+      padding-top: 96px;
+      padding-bottom: 96px;
+    }
+  }
+  .container--py {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+  @media (min-width: 1024px) {
+    .container--py {
+      padding-top: 96px;
+      padding-bottom: 96px;
+    }
+  }
+  .container--px {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+  .container--pt {
+    padding-top: 70px;
+  }
+  @media (min-width: 1024px) {
+    .container--pt {
+      padding-top: 96px;
+    }
+  }
+  .container--pr {
+    padding-right: 24px;
+  }
+  .container--pb {
+    padding-bottom: 70px;
+  }
+  @media (min-width: 1024px) {
+    .container--pb {
+      padding-bottom: 96px;
+    }
+  }
+  .container--p {
+    padding-left: 24px;
+  }
+  
+  @media (max-width: 1023px) {
+    .hide-for-mobile {
+      display: none;
+    }
+  }
+  @media (min-width: 1024px) {
+    .hide-for-desktop {
+      display: none;
+    }
+  }
+  
+  @media (max-width: 639px){
+    .starter p{
+      font-size: 14px;
+    }
+	
+  }
+  .marquee {
+	width: 100%;
+	overflow: hidden;
+	white-space: nowrap;
+  }
+  
+  .marquee p {
+	display: inline-block;
+	direction: left;
+	font-size: xx-large;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	animation: marquee 15s linear infinite; /* Adjust duration as needed */
+  }
+  
+  @keyframes marquee {
+	0% { transform: translateX(100%); }
+	100% { transform: translateX(-100%); }
+  }
+	</style>
+	<link rel="stylesheet"  href="external.css">
+</head>
+
+
+<body>
+
+	<form id="searchForm">
+		<input type="text" id="searchInput" placeholder="Search...">
+		<a href="https//google.com"><button  type="submit">Search</button></a>
+	</form>
+ 
+<header>
+	
+	<img src="images/realLOGO.png" alt=" Farm logo">
+
+
+	<nav style="right: 0; margin-right: 0;">
+		<ul class="navbar" id="myNavbar">
+			<li class="icon"><a href="index.html">Home</a></li>
+
+			<li class="dropdown"><a href="#" class="dropbtn">About Us</a>
+				<div class="dropdown-content">
+					<a href="Location.html">Location</a>
+					<a href="History.html">History</a>
+				</div>
+			</li>
+
+			<li class="dropdown"><a href="#" class="dropbtn">Services</a>
+				<div class="dropdown-content">
+					<a href="Available Breeds.html">Available Breeds</a>
+					<a href="Other Services.html">0ther Services</a>
+				</div>
+			</li>
+
+			<li class="dropdown"><a href="#" class="dropbtn">Contact Us</a>
+				<div class="dropdown-content">
+					<a href="Trading with Us.html">Trading with Us</a>
+					<a href="portfolio.html">Portfolio</a>
+				</div>
+			</li>
+
+			<li><a href="Orders.html">Orders</a></li>
+
+		</ul>
+		<a id="btnhamburger" href="#" class="header__menu   hide-for-desktop">
+	<span></span>
+	<span></span>
+	<span></span>
+  </a>
+	</nav>
+	
+
+	</header>
+	
+
+<br><br>
+<script>
+	function goResponsive() {
+		var x = document.getElementById("myNavbar");
+		if (x.className === "navbar"){
+			x.className += "responsive";
+		}else{
+			x.className = "navbar";
+		}
+	}
+</script>
+
+
+	<div id="searchResults"></div>
+
+	<!-- Slider Section -->
+	<section>
+<div align="center" class="slideshow-container" style="width: 100%;">
+    <div class="mySlides fade">
+      <img src="images/COW.JPEG" style="width: 100%;">
+	  <div class="text" style="font-family: Cooper Black; "><h1 style="text-align: center;">WELCOME TO FARM UGANDA</h1></div>
+    </div>
+    
+    <div class="mySlides fade">
+      <img src="images/GOAT.JPEG" style="width: 100%;">
+	  <div class="text" style="font-family: Cooper Black; "><h1>GOOD BREEDS ALL AVAILABLE</h1></div>
+    </div>
+    
+    <div class="mySlides fade">
+      <img src="images/cow e.JPEG" style="width: 100%;" >
+	  <div class="text" style="font-family: Cooper Black;"><h1>SURE INVESTIMENT</h1></div>    
+    <br>
+    
+    <div style="text-align:center">
+      <span class="dot"></span> 
+      <span class="dot"></span> 
+      <span class="dot"></span>
+      <span class="dot"></span> 
+      <span class="dot"></span>
+    </div>
+</div>
+</section>
+	
+	<div class="marquee" ><p>This is Farm UGANDA. You are Highly welcome to our web page.Contact us via +256 756 188 401/765 958 809 or atwongerevianney@gmail.com </p></div>
+
+	<table border="0" style="width: 100%;">
+    <tr>
+        <th>
+<section class="mission">
+   <h2> LET US FARM TOGETHER</h2>
+    Farm to develop Uganda
+    <details><summary>READ MORE</summary>This is the best farm in Uganda providing the best of the services</details>
+</section>
+</th>
+
+<th>
+<section  class="vision">
+
+<h2>Our Vision</h2>
+INVESTING IN FARMING
+
+<details><summary>READ MORE</summary>Farming is the backborn of Uganda.<br>Investing in farming can uplift the economy of uganda.</details>
+</section>
+</th>
+
+    <th>
+<section  class="values" >
+    <h2 style="font-family: sans-serif; font-size: 20PX">AGRICULTURE FOR ALL</h2>
+    
+   <details>
+    FARM AT ITS BEST
+    <summary>READ MORE</summary>We have all kinds of animals you need. All breeds of goats ,goats in all sizes are available</details> 
+</section>
+</th>
+</tr>
+</table>
+<div>
+  <br><br>
+
+<table border="0" style="width: 100%; background-color: lightgreen;">
+    <tr>
+        <th >
+            <img src="images/goat-farming.JPEG" style="width: 100%;">
+        </th>
+        <th>
+    <h1>
+        ALL KINDS OF ANIMALS YOU NEED YOU ARE SORTED <br>LET US FARM TOGETHER
+</h1>
+<p>We are number one leading dealers in Uganda. <br> All breeds of cattle and in all sizes we have them. Kids and calves for sale also are available for sale
+</p>
+</section>
+</div>
+</th>
+</tr>
+</table>
+<br><br>
+<footer style="background-color:rgba(160, 165, 160, 0.918); ">
+    <table border="0" style="width: 100%;">
+        <tr>
+			<th>
+    
+        <h1>OFFICE ADDRESS</h1>
+        IBANDA MUNICIPALITY
+        <br>
+        WORKING HOURS
+        <br>
+        Monday upto Friday from 8:00am to 6:00pm
+   
+			</th>
+			<th>
+  				</h1>CONTACT US </h1><br>
+				  <a href="mailto:atwongerevianney311@gmail.com">atwongerevianney@gmail.com</a>
+    			<br>
+    			(+256) 756188401
+   
+    		</th>
+    		</tr>
+
+    		<tr>
+        	<th>
+   
+       			<h1> About Us</h1>
+				We are the best in the business rapidly growing. For more information contact us via our contacts
+
+   
+			</th>
+    		<th>
+  
+        <h1>Links</h1>
+<ul>
+
+        <a href="index.html">Home</li></a>|
+        <br>
+
+        <a href="History.html">History</li></a>|
+<br>
+        <a href="Location.html">Location</a>
+<br>
+		<a href="Available Breeds.html">Available Breeds</a>
+<br>
+		<a href="Other Services.html">Other Services</a>
+<br>
+        <a href="Trading with Us.html">Trading with Us</li></a>|
+
+<br>
+<a href="Trading with Us.html">Log in to Trade with Us</li></a>
+   
+</ul>
+</th>
+</table>
+</tr>
+<br><br>
+		other contacts:<br>
+		<a href="https://wa.me/256756188401"><img src="images/media1.jpg" style="width: 50px;"></a> <a href="mailto:atwongerevianney311@gmail.com"><img src="images/mail-line-icon.jpg" style="width: 50px;"></a> <a href="https://twitter.com/@AtwongereV42813" target="_blank"><img src="images/media3.jpg" style="width: 50px;"></a> <a href="https://www.facebook.com/profile.php?id=61558090626396" target="_blank"><img src="images/media4.jpg" style="width: 50px;"></a>
+<br><br>
+
+<h2>OUR DEDICATED TEAM</h2>
+<table border="0" style="width: 100%;">
+	<tr>
+		<th>NAME</th>
+		<th>POSITION</th>
+		<th>CONTACT</th>
+	</tr>
+	<tr>
+		<td>ATWONGERE VIANNEY</td>
+		<td>EXCECUTIVE DIRECTOR </td>
+		<td>(+256) 756188401</td>
+	</tr>
+
+	<tr>
+		<td>TUMWINE JOHN</td>
+		<td>MANAGER(MARKETING MANAGER)</td>
+		<td>(+256) 774435439</td>
+	</tr>
+
+	<tr>
+		<td>AJUNA CONRALD</td>
+		<td>NATIONAL CORDINATOR</td>
+		<td>(+256) 709361371</td>
+	</tr>
+
+	<tr>
+		<td>AKOREBIRUNGI BRIDGET</td>
+		<td>FINANCE MANAGER(IN CHARGE OF TRANSACTIONS)</td>
+		<td>(+256) 780152300</td>
+	</tr>
+</table>
+
+<p align="center" style="color: rgb(255, 0, 64); font-size: 25px;">Copyright  2022-2024. LET US FARM TOGETHER.</p>
+</footer>
+
+	<script>
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}    
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+      setTimeout(showSlides, 4000); // Change image every 4 seconds
+    }
+	const btnhamburger = document.querySelector('#btnhamburger');
+
+btnhamburger.addEventListener('click', () => {
+  btnhamburger.classList.toggle('active');
+});
+const overlay = document.querySelector('#overlay');
+
+btnhamburger.addEventListener('click', () => {
+  overlay.classList.toggle('active');
+});
+const mobile = document.querySelector('#mobile');
+
+btnhamburger.addEventListener('click', () => {
+  mobile.classList.toggle('active');
+});
+
+const body = document.querySelector('body');
+btnhamburger.addEventListener('click', () => {
+ body.classList.toggle('noscroll');
+});
+
+const faqs = document.querySelectorAll(".faqs-content");
+
+faqs.forEach(faq => {
+   faq.addEventListener("click", () => {
+	   faq.classList.toggle("active");
+   });
+});
+</script>
+
+</body>
+
+</html>
